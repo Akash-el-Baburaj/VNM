@@ -13,8 +13,8 @@ export const contacts : any[] = [
       "religion": "Christianity",
       "lastPurchaseDate": "2024-12-15",
       "invoicenumber": "INV12345",
-      "invoiceamount": 250.75
-      
+      "invoiceamount": 250.75,
+      "assignedSalesExecutive":"Karthik"
     },
     {
       "id": 2,
@@ -30,7 +30,8 @@ export const contacts : any[] = [
       "religion": "Hinduism",
       "lastPurchaseDate": "2024-11-20",
       "invoicenumber": "INV67890",
-      "invoiceamount": 175.50
+      "invoiceamount": 175.50,
+      "assignedSalesExecutive":"Akash"
       
     },
     {
@@ -47,7 +48,8 @@ export const contacts : any[] = [
       "religion": "Islam",
       "lastPurchaseDate": "2024-10-18",
       "invoicenumber": "INV11223",
-      "invoiceamount": 320.00
+      "invoiceamount": 320.00,
+      "assignedSalesExecutive":"Anandhu"
       
     },
     {
@@ -64,7 +66,8 @@ export const contacts : any[] = [
       "religion": "Judaism",
       "lastPurchaseDate": "2024-09-12",
       "invoicenumber": "INV33445",
-      "invoiceamount": 400.25
+      "invoiceamount": 400.25,
+      "assignedSalesExecutive":"Karthik"
       
     },
     {
@@ -81,7 +84,8 @@ export const contacts : any[] = [
       "religion": "Buddhism",
       "lastPurchaseDate": "2024-08-22",
       "invoicenumber": "INV55667",
-      "invoiceamount": 275.30
+      "invoiceamount": 275.30,
+      "assignedSalesExecutive":"Akash"
       
     },
     {
@@ -98,7 +102,8 @@ export const contacts : any[] = [
       "religion": "Hinduism",
       "lastPurchaseDate": "2024-07-30",
       "invoicenumber": "INV77889",
-      "invoiceamount": 150.00
+      "invoiceamount": 150.00,
+      "assignedSalesExecutive":"Anandhu"
       
     },
     {
@@ -115,7 +120,8 @@ export const contacts : any[] = [
       "religion": "Taoism",
       "lastPurchaseDate": "2024-06-18",
       "invoicenumber": "INV88990",
-      "invoiceamount": 340.40
+      "invoiceamount": 340.40,
+      "assignedSalesExecutive":"Karthik"
       
     },
     {
@@ -132,7 +138,8 @@ export const contacts : any[] = [
       "religion": "Christianity",
       "lastPurchaseDate": "2024-05-12",
       "invoicenumber": "INV99001",
-      "invoiceamount": 220.60
+      "invoiceamount": 220.60,
+      "assignedSalesExecutive":"Akash"
       
     },
     {
@@ -149,7 +156,8 @@ export const contacts : any[] = [
       "religion": "Christianity",
       "lastPurchaseDate": "2024-04-18",
       "invoicenumber": "INV00112",
-      "invoiceamount": 185.75
+      "invoiceamount": 185.75,
+      "assignedSalesExecutive":"Anandhu"
       
     },
     {
@@ -166,7 +174,8 @@ export const contacts : any[] = [
       "religion": "Atheism",
       "lastPurchaseDate": "2024-03-22",
       "invoicenumber": "INV11223",
-      "invoiceamount": 300.50
+      "invoiceamount": 300.50,
+      "assignedSalesExecutive":"Karthik"
       
     },
     
@@ -184,7 +193,8 @@ export const contacts : any[] = [
         "religion": "Islam",
         "lastPurchaseDate": "2024-02-14",
         "invoicenumber": "INV33456",
-          "invoiceamount": 120.00
+          "invoiceamount": 120.00,
+          "assignedSalesExecutive":"Akash"
         
       },
       {
@@ -201,7 +211,8 @@ export const contacts : any[] = [
         "religion": "Christianity",
         "lastPurchaseDate": "2024-01-18",
         "invoicenumber": "INV44567",
-          "invoiceamount": 350.80
+          "invoiceamount": 350.80,
+          "assignedSalesExecutive":"Anandhu"
         
       },
       {
@@ -218,7 +229,8 @@ export const contacts : any[] = [
         "religion": "Hinduism",
         "lastPurchaseDate": "2023-12-25",
         "invoicenumber": "INV55678",
-          "invoiceamount": 270.45
+          "invoiceamount": 270.45,
+          "assignedSalesExecutive":"Karthik"
         
       },
       {
@@ -235,7 +247,8 @@ export const contacts : any[] = [
         "religion": "Christianity",
         "lastPurchaseDate": "2023-11-30",
         "invoicenumber": "INV66789",
-          "invoiceamount": 480.00
+          "invoiceamount": 480.00,
+          "assignedSalesExecutive":"Akash"
         
       },
       {
@@ -252,7 +265,8 @@ export const contacts : any[] = [
         "religion": "Judaism",
         "lastPurchaseDate": "2023-10-22",
         "invoicenumber": "INV77890",
-          "invoiceamount": 315.00
+          "invoiceamount": 315.00,
+          "assignedSalesExecutive":"Anandhu"
         
       },
       {
@@ -269,7 +283,8 @@ export const contacts : any[] = [
         "religion": "Hinduism",
         "lastPurchaseDate": "2023-09-15",
         "invoicenumber": "INV88901",
-          "invoiceamount": 230.50
+          "invoiceamount": 230.50,
+          "assignedSalesExecutive":"Karthik"
         
       },
       {
@@ -286,7 +301,8 @@ export const contacts : any[] = [
         "religion": "Buddhism",
         "lastPurchaseDate": "2023-08-18",
         "invoicenumber": "INV99012",
-          "invoiceamount": 410.75
+          "invoiceamount": 410.75,
+          "assignedSalesExecutive":"Akash"
         
       },
       {
@@ -303,8 +319,8 @@ export const contacts : any[] = [
         "religion": "Christianity",
         "lastPurchaseDate": "2023-07-11",
         "invoicenumber": "INV11234",
-          "invoiceamount": 295.00
-        
+          "invoiceamount": 295.00,
+        "assignedSalesExecutive":"Anandhu"
       },
       {
         "id": 19,
@@ -320,7 +336,8 @@ export const contacts : any[] = [
         "religion": "Christianity",
         "lastPurchaseDate": "2023-06-02",
         "invoicenumber": "INV22345",
-          "invoiceamount": 280.90
+          "invoiceamount": 280.90,
+           "assignedSalesExecutive":"Karthik"
         
       },
       {
@@ -337,7 +354,8 @@ export const contacts : any[] = [
         "religion": "Hinduism",
         "lastPurchaseDate": "2023-05-01",
         "invoicenumber": "INV33456",
-          "invoiceamount": 305.60
+          "invoiceamount": 305.60,
+          "assignedSalesExecutive":"Akash"
         
       }
     

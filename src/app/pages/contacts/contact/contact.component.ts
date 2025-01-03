@@ -20,11 +20,13 @@ export class ContactComponent implements OnInit {
     name: '',
     phone: '',
     email: '',
-    marriageAnniversary: '',
+    assignedSalesExecutive: '',
     lastPurchaseDate: '',
     religion: ''
   };
   uniqueReligions: any[] = []
+
+  salesExcecutive: any[] = []
 
   pageSizeOptions: number[] = [10, 25, 50, 100];
 
@@ -36,6 +38,9 @@ export class ContactComponent implements OnInit {
     this.initTableConfig();
     this.uniqueReligions = [
       ...new Set(contacts.map((item) => item.religion))
+    ];
+    this.salesExcecutive = [
+      ...new Set(contacts.map((item) => item.assignedSalesExecutive))
     ];
   }
 
@@ -110,6 +115,13 @@ export class ContactComponent implements OnInit {
         formatter: (record: any) => record.religion,
         width: 120,
       },
+      
+      {
+        name: 'assignedSalesExecutive',
+        label: 'Assigned Sales Executive',
+        formatter: (record: any) => record.assignedSalesExecutive,
+        width: 150,
+      },
       {
         name: 'lastPurchaseDate',
         label: 'Last Purchase Date',
@@ -177,7 +189,7 @@ export class ContactComponent implements OnInit {
   }
 
   matchesMarriageAnniverssary(tables: any, term: string) {
-    return tables.marriageAnniversary.toLowerCase().includes(term.toLowerCase())
+    return tables.assignedSalesExecutive.toLowerCase().includes(term.toLowerCase())
   }
 
   matcheslastPurchaseDate(tables: any, term: string) {
@@ -210,7 +222,7 @@ export class ContactComponent implements OnInit {
         case 'emailId':
           updatedData = updatedData.filter(record => this.matchesEmail(record, searchTerm));
           break;
-        case 'marriageAnniversary':
+        case 'assignedSalesExecutive':
           updatedData = updatedData.filter(record => this.matchesMarriageAnniverssary(record, searchTerm));
           break;
         case 'lastPurchaseDate':
@@ -236,7 +248,7 @@ export class ContactComponent implements OnInit {
       name: '',
       phone: '',
       email: '',
-      marriageAnniversary: '',
+      assignedSalesExecutive: '',
       lastPurchaseDate: '',
       religion: ''
     };
