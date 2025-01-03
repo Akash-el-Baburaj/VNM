@@ -42,7 +42,7 @@
                         (ngModelChange)="searchData($event, 'assignedSalesExecutive')"
                         [(ngModel)]="searchFields.assignedSalesExecutive"
                       >
-                        <option value="Select Sales Executive">Select Religion</option>
+                        <option value="Select Sales Executive">Select Sales Executive</option>
                         <option *ngFor="let rel of salesExcecutive" [value]="rel">
                           {{ rel }}
                         </option>
@@ -148,8 +148,30 @@
           <input type="date" id="marriageAnniversary" class="form-control" name="marriageAnniversary" ngModel />
         </div>
         <div class="mb-3 col-md-6">
+          <label for="assignedSalesExecutive" class="form-label">Assigned Sales Executive</label>
+          <select
+          class="form-control" id="assignedSalesExecutive" name="assignedSalesExecutive" ngModel
+         
+        >
+          <option value="Select Sales Executive">Select Sales Executive</option>
+          <option *ngFor="let rel of salesExcecutive" [value]="rel">
+            {{ rel }}
+          </option>
+        </select>
+          <!-- <input type="text" id="religion" class="form-control" name="religion" ngModel /> -->
+        </div>
+        <div class="mb-3 col-md-6">
           <label for="religion" class="form-label">Religion</label>
-          <input type="text" id="religion" class="form-control" name="religion" ngModel />
+          <select
+          class="form-control" id="religion" name="religion" ngModel
+         
+        >
+          <option value="Select Sales Executive">Select Religion</option>
+          <option *ngFor="let rel of uniqueReligions" [value]="rel">
+            {{ rel }}
+          </option>
+        </select>
+          <!-- <input type="text" id="religion" class="form-control" name="religion" ngModel /> -->
         </div>
         <div class="mb-3 col-md-6">
           <label for="lastPurchaseDate" class="form-label">Last Purchase Date</label>
