@@ -28,6 +28,8 @@ export class ContactComponent implements OnInit {
 
   salesExcecutive: any[] = []
 
+  leadStages: any[] = []
+
   pageSizeOptions: number[] = [10, 25, 50, 100];
 
   constructor(private modalService: NgbModal) { }
@@ -40,7 +42,10 @@ export class ContactComponent implements OnInit {
       ...new Set(contacts.map((item) => item.religion))
     ];
     this.salesExcecutive = [
-      ...new Set(contacts.map((item) => item.assignedSalesExecutive))
+      ...new Set(contacts.map((item) => item.assignTo))
+    ];
+    this.leadStages = [
+      ...new Set(contacts.map((item) => item.leadStage))
     ];
   }
 
@@ -56,21 +61,21 @@ export class ContactComponent implements OnInit {
   initTableConfig(): void {
     this.columns = [
       {
-        name: 'customerName',
+        name: 'name',
         label: 'Name',
-        formatter: (record: any) => record.customerName,
+        formatter: (record: any) => record.name,
         width: 245,
       },
       {
-        name: 'phoneNumber',
+        name: 'phone',
         label: 'Phone No',
-        formatter: (record: any) => record.phoneNumber,
+        formatter: (record: any) => record.phone,
         width: 180,
       },
       {
-        name: 'emailId',
+        name: 'email',
         label: 'Email ID',
-        formatter: (record: any) => record.emailId,
+        formatter: (record: any) => record.email,
         width: 250,
       },
       {
@@ -80,33 +85,27 @@ export class ContactComponent implements OnInit {
         width: 300,
       },
       {
-        name: 'area',
-        label: 'Area',
-        formatter: (record: any) => record.area,
+        name: 'city',
+        label: 'City',
+        formatter: (record: any) => record.city,
         width: 150,
       },
       {
-        name: 'town',
-        label: 'Town',
-        formatter: (record: any) => record.town,
+        name: 'state',
+        label: 'State',
+        formatter: (record: any) => record.state,
         width: 150,
       },
       {
-        name: 'pinCode',
-        label: 'Pin Code',
-        formatter: (record: any) => record.pinCode,
-        width: 100,
-      },
-      {
-        name: 'dateOfBirth',
+        name: 'dob',
         label: 'Date of Birth',
-        formatter: (record: any) => record.dateOfBirth,
+        formatter: (record: any) => record.dob,
         width: 150,
       },
       {
-        name: 'marriageAnniversary',
+        name: 'anniversary',
         label: 'Marriage Anniversary',
-        formatter: (record: any) => record.marriageAnniversary,
+        formatter: (record: any) => record.anniversary,
         width: 160,
       },
       {
@@ -115,33 +114,120 @@ export class ContactComponent implements OnInit {
         formatter: (record: any) => record.religion,
         width: 120,
       },
-      
       {
-        name: 'assignedSalesExecutive',
+        name: 'assignTo',
         label: 'Assigned Sales Executive',
-        formatter: (record: any) => record.assignedSalesExecutive,
+        formatter: (record: any) => record.assignTo,
         width: 150,
       },
       {
-        name: 'lastPurchaseDate',
-        label: 'Last Purchase Date',
-        formatter: (record: any) => record.lastPurchaseDate,
+        name: 'leadSource',
+        label: 'Lead Source',
+        formatter: (record: any) => record.leadSource,
         width: 200,
       },
       {
-        name: 'invoiceNumber',
-        label: 'Invoice Number',
-        formatter: (record: any) => record.invoicenumber,
+        name: 'leadStage',
+        label: 'Lead Stage',
+        formatter: (record: any) => record.leadStage,
         width: 150,
       },
       {
-        name: 'invoiceAmount',
-        label: 'Invoice Amount',
-        formatter: (record: any) => record.invoiceamount,
+        name: 'products',
+        label: 'Products',
+        formatter: (record: any) => record.products,
         width: 150,
-      }
-
+      },
     ];
+    
+    // this.columns = [
+    //   {
+    //     name: 'customerName',
+    //     label: 'Name',
+    //     formatter: (record: any) => record.customerName,
+    //     width: 245,
+    //   },
+    //   {
+    //     name: 'phoneNumber',
+    //     label: 'Phone No',
+    //     formatter: (record: any) => record.phoneNumber,
+    //     width: 180,
+    //   },
+    //   {
+    //     name: 'emailId',
+    //     label: 'Email ID',
+    //     formatter: (record: any) => record.emailId,
+    //     width: 250,
+    //   },
+    //   {
+    //     name: 'address',
+    //     label: 'Address',
+    //     formatter: (record: any) => record.address,
+    //     width: 300,
+    //   },
+    //   {
+    //     name: 'area',
+    //     label: 'Area',
+    //     formatter: (record: any) => record.area,
+    //     width: 150,
+    //   },
+    //   {
+    //     name: 'town',
+    //     label: 'Town',
+    //     formatter: (record: any) => record.town,
+    //     width: 150,
+    //   },
+    //   {
+    //     name: 'pinCode',
+    //     label: 'Pin Code',
+    //     formatter: (record: any) => record.pinCode,
+    //     width: 100,
+    //   },
+    //   {
+    //     name: 'dateOfBirth',
+    //     label: 'Date of Birth',
+    //     formatter: (record: any) => record.dateOfBirth,
+    //     width: 150,
+    //   },
+    //   {
+    //     name: 'marriageAnniversary',
+    //     label: 'Marriage Anniversary',
+    //     formatter: (record: any) => record.marriageAnniversary,
+    //     width: 160,
+    //   },
+    //   {
+    //     name: 'religion',
+    //     label: 'Religion',
+    //     formatter: (record: any) => record.religion,
+    //     width: 120,
+    //   },
+      
+    //   {
+    //     name: 'assignedSalesExecutive',
+    //     label: 'Assigned Sales Executive',
+    //     formatter: (record: any) => record.assignedSalesExecutive,
+    //     width: 150,
+    //   },
+    //   {
+    //     name: 'lastPurchaseDate',
+    //     label: 'Last Purchase Date',
+    //     formatter: (record: any) => record.lastPurchaseDate,
+    //     width: 200,
+    //   },
+    //   {
+    //     name: 'invoiceNumber',
+    //     label: 'Invoice Number',
+    //     formatter: (record: any) => record.invoicenumber,
+    //     width: 150,
+    //   },
+    //   {
+    //     name: 'invoiceAmount',
+    //     label: 'Invoice Amount',
+    //     formatter: (record: any) => record.invoiceamount,
+    //     width: 150,
+    //   }
+
+    // ];
   }
   
 
